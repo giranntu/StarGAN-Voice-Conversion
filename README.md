@@ -3,6 +3,7 @@ This is a pytorch implementation of the paper: StarGAN-VC: Non-parallel many-to-
 Note that the model architecture is a little different from that of the original paper.
 
 # Dependencies
+* Sox (for Ubuntu: sudo apt-get install sox )
 * Python 3.6 (or 3.5)
 * Pytorch 0.4.0
 * pyworld
@@ -29,6 +30,9 @@ tar -xzvf VCTK-Corpus.tar.gz -C ./data
 Preprocess data
 
 We will use Mel-cepstral coefficients(MCEPs) here.
+Make sure you install sox for preprocessing, 
+sudo apt-get install sox
+
 
 ```bash
 python preprocess.py --sample_rate 16000 \
