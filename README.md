@@ -30,9 +30,12 @@ tar -xzvf VCTK-Corpus.tar.gz -C ./data
 Preprocess data
 
 We will use Mel-cepstral coefficients(MCEPs) here.
-Make sure you install sox for preprocessing, 
-sudo apt-get install sox
+Make sure you install sox and voila  for preprocessing,
 
+```
+sudo apt-get install sox
+pip install voila
+```
 
 ```bash
 python preprocess.py --sample_rate 16000 \
