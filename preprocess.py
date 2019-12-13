@@ -22,7 +22,8 @@ def resample(spk, origin_wavpath, target_wavpath):
         os.makedirs(folder_to, exist_ok=True)
         wav_to = join(folder_to, wav)
         wav_from = join(origin_wavpath, spk, wav)
-        subprocess.call(['sox', wav_from, "-r", "16000", wav_to])
+        #subprocess.call(['sox', wav_from, "-r", "16000", wav_to])
+        subprocess.call(['sox', wav_from, "-r", "16000", "-D", "--norm", wav_to])
     return 0
 
 def resample_to_16k(origin_wavpath, target_wavpath, num_workers=1):
